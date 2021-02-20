@@ -21,12 +21,17 @@ public class LoginBean {
 	public String login() {
 		FacesContext context = FacesContext.getCurrentInstance();
 		
-		if ("admin".equals(this.nomeUsuario) && "123".equals(this.senha)) {
+	
+		if((this.nomeUsuario.equals("admin")) && (this.senha.equals("123"))) {
+			
 			this.usuario.setNome(this.nomeUsuario);
 			this.usuario.setDataLogin(new Date());
+		    
+			System.out.println("testou "+nomeUsuario); 
 			
-			return "/ConsultaLancamentos?faces-redirect=true";
-		} else {
+			return "/home?faces-redirect=true";
+			
+		}else {
 			FacesMessage mensagem = new FacesMessage("Usuário/senha inválidos!");
 			mensagem.setSeverity(FacesMessage.SEVERITY_ERROR);
 			context.addMessage(null, mensagem);

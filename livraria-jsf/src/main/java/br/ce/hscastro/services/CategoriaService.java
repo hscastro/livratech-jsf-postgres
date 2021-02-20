@@ -8,7 +8,7 @@ import javax.inject.Inject;
 import br.ce.hscastro.domain.Categoria;
 import br.ce.hscastro.repositories.CategoriaRepository;
 
-public class CategoriaServive implements Serializable {
+public class CategoriaService implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 

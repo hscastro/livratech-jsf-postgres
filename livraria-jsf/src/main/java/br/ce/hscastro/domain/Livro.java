@@ -14,11 +14,12 @@ public class Livro implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
 	private Long id;
 	
 	private String isnb;
 	
-	private String nome;	
+	private String titulo;	
 	
 	private String autor;
 		
@@ -26,10 +27,10 @@ public class Livro implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Livro(Long id, String isnb, String nome, String autor) {
+	public Livro(Long id, String isnb, String titulo, String autor) {
 		this.id = id;
 		this.isnb = isnb;
-		this.nome = nome;
+		this.titulo = titulo;
 		this.autor = autor;
 	}
 
@@ -49,12 +50,12 @@ public class Livro implements Serializable {
 		this.isnb = isnb;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getTitulo() {
+		return titulo;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 
 	public String getAutor() {

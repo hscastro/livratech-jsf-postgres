@@ -8,7 +8,7 @@ import javax.inject.Inject;
 import br.ce.hscastro.domain.Livro;
 import br.ce.hscastro.repositories.LivroRepository;
 
-public class LivroServive implements Serializable {
+public class LivroService implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 

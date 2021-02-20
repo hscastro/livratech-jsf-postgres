@@ -6,12 +6,13 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
-
 import br.ce.hscastro.domain.Livro;
+
+
 
 public class LivroRepository implements Serializable {
 	
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;	
 	
 	
 	private EntityManager entityManager;
@@ -22,6 +23,7 @@ public class LivroRepository implements Serializable {
 	}
 	
 	public void save(Livro livro) {
+		System.out.println("testou "+livro.getAutor()); 
 		entityManager.persist(livro);
 	} 
 	
