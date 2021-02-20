@@ -21,23 +21,23 @@ public class LivroRepository implements Serializable {
 		this.entityManager = entityManager;
 	}
 	
-	public void salvar(Livro livro) {
+	public void save(Livro livro) {
 		entityManager.persist(livro);
 	} 
 	
-	public void excluir(Long id) {
+	public void delete(Long id) {
 		entityManager.getReference(Livro.class, id);
 	}
 
-	public Livro buscarPorId(Long id) {
+	public Livro findById(Long id) {
 		return entityManager.find(Livro.class, id);
 	}
 	
-	public Livro editar(Livro livro) {
+	public Livro edit(Livro livro) {
 		return entityManager.merge(livro);
 	} 
 	
-	public List<Livro> lista() {
+	public List<Livro> findAll() {
 		TypedQuery<Livro> query = entityManager.createQuery(
 				"from Livro", Livro.class);
 		return query.getResultList();
